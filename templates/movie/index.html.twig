@@ -20,7 +20,7 @@ h1 {
 {% if movies|length > 0 %}
     <ul>
     {% for movie in movies %}    
-        <li>{{ movie.title }}</li>
+        <li><a href="{{ path('app_movie_show', {'id' : movie.id}) }}">{{ movie.title }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
